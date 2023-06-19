@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+    <!-- Compiled and minified JavaScript -->
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>            
+    
+    <style>
+      /*
+      .modal {
+        background-color: #de4a4a;
+        &.modal-fixed-header {
+            padding: 0;
+            height: 100%;
+            .modal-header {
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                position: absolute;
+                top: 0;
+            }
+            .modal-header {
+                border-radius: 0 0 2px 2px;
+                
+                padding: 4px 6px;
+                height: 56px;
+                width: 100%;
+            }
+            .modal-content {
+                position: absolute;
+                top:26px;
+                height: calc(100% - 26px);
+                max-height: 100%;
+                width: 100%;
+                overflow-y: auto;
+            }
+        }
+    }
+    */
+    .modal { width: 75% !important ; max-height: 100% !important ; overflow-y: hidden !important ;}
+    </style>
+</head>
+<body>
+  <body>
+    <div id="btnRegistrar"></div>
+<table id="myTable"  class="display">'
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Rol</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="resultado">
+
+        </tbody>
+        </table>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+
+    <form class="col s12">
+      <div class="col">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="nombre" type="text" class="validate" placeholder="Nombre" >
+          <label for="nombre">Nombre</label>
+          
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input id="email" type="tel" class="validate" placeholder="Email" >
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">lock</i>
+          <input id="password" type="tel" class="validate" placeholder="Password" >
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">people</i>
+          <input id="rol" type="tel" class="validate" placeholder="Rol" >
+          <label for="rol">Rol</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">people</i>
+          <input id="estado" type="tel" class="validate" placeholder="Estado" >
+          <label for="estado">Estado</label>
+        </div>
+        <div class="input-field col s6">
+
+
+         </div>
+        <div class="modal-footer">
+          <button class="btn waves-effect waves-light" type="button" name="action" id="btnActualizar">Actualizar
+            <i class="material-icons right">send</i>
+          </button>
+
+          <a href="#!" class="modal-close waves-effect waves-green btn-close">
+
+            <button class="btn waves-effect waves-light green accent-3" type="submit" name="action">Cerrar
+              <i class="material-icons right">close</i>
+            </button>
+          </a>
+
+
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>
+
+  <table id="myTable" class="display">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Data 1</td>
+            <td>Row 1 Data 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Row 2 Data 2</td>
+        </tr>
+    </tbody>
+</table>
+
+ <script  src="js/funciones.js">
+ </script> 
+
+
+     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+  
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+
+  let table = new DataTable('#myTable', {
+    // options
+});
+
+    </script>
+
+
+</body>
+</html>
